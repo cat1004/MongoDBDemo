@@ -77,14 +77,41 @@ public class UserController {
     }
 
   }
- /**
+  /**
  * 打开注册界面
  * @return
  */
+
   @RequestMapping("/resgi")
   public String resgi() {
     return "resgi";
   }
 
+  /**
+  * 注册控制层
+  */
+  @RequestMapping(value = "/rege")
+  public String resig(HttpServletRequest request) {
+    //获取用户和密码
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
 
+    //根据昵称查询，用户是否存在
+    User user = userRepository.findByUsername(username);
+
+    //若存在
+    if (user != null) { //昵称重复
+      return "ferror";
+    }
+
+    //若不存在
+    User newUser = new User(username, password);
+    //注册
+    userRepository.save(newUser);
+
+    //将信息设置session作用域
+    request.setAttribute("user", newUser);
+
+    return "index";
+  }
 }
