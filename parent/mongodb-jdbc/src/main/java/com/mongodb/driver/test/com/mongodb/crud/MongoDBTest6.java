@@ -27,9 +27,9 @@ public class MongoDBTest6 {
       System.out.println("集合 test 选择成功");
 
       //删除符合条件的第一个文档
-      collection.deleteOne(Filters.eq("likes", 200));
+      collection.deleteOne(Filters.eq("likes",  200));
       //删除所有符合条件的文档
-      collection.deleteMany(Filters.eq("likes", 200));
+      collection.deleteMany(Filters.eq("likes",  200));
       //检索查看结果
       FindIterable<Document> findIterable = collection.find();
       MongoCursor<Document> mongoCursor = findIterable.iterator();
