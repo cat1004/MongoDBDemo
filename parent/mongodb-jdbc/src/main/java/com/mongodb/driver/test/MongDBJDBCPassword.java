@@ -1,4 +1,4 @@
-package test;
+package com.mongodb.driver.test;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
