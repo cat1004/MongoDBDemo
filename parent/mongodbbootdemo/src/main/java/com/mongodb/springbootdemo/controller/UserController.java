@@ -23,6 +23,7 @@ public class UserController {
   @Autowired
   private MongoTemplate mongoTemplate;
 
+  //首页
   @RequestMapping(value = "/index")
   public String index(Model model, HttpServletRequest request) {
 
@@ -37,6 +38,7 @@ public class UserController {
     return "index";
   }
 
+ //登录
   @RequestMapping(value = "/oplogin")
   public String oplogin() {
     return "login";
