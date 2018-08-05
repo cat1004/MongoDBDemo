@@ -77,4 +77,14 @@ public class UserController {
     }
 
   }
+ /**
+ * 打开注册界面
+ * @return
+ */
+  @RequestMapping("/resgi")
+  public String resgi() {
+    return "resgi";
+  }
+
+
 }
