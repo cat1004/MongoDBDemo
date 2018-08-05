@@ -38,9 +38,10 @@ public class UserController {
     return "index";
   }
 
- //登录
+ //登录界面
   @RequestMapping(value = "/oplogin")
   public String oplogin() {
     return "login";
   }
+
 }
