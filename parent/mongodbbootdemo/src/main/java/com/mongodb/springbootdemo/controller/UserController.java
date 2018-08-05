@@ -9,6 +9,9 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 /**
  * @author : chenpeng
@@ -113,5 +116,17 @@ public class UserController {
     request.setAttribute("user", newUser);
 
     return "index";
+  }
+
+  @ResponseBody
+  @RequestMapping("/findByName")
+  public User findByName() {
+    return userRepository.findByUsername("krryxq");
+  }
+
+  @ResponseBody
+  @RequestMapping("/find")
+  public List<User> find() {
+    return mongoTemplate.findAll(User.class);
   }
 }
