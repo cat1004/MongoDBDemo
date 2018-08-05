@@ -9,7 +9,7 @@ import com.mongodb.springboot.entity.UserEntity;
 public interface UserDao  {
   void saveUser(UserEntity user);
   UserEntity findUserByUserName(String userName);
-  int updateUser(UserEntity user);
+  Long updateUser(UserEntity user);
   void deleteUserById(Long id);
 
 }
