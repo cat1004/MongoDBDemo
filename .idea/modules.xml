@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/MongoDBDemo.iml" filepath="$PROJECT_DIR$/.idea/MongoDBDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/mongodb-jdbc/mongodbjdbc.iml" filepath="$PROJECT_DIR$/parent/mongodb-jdbc/mongodbjdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent/springboot/springboot.iml" filepath="$PROJECT_DIR$/parent/springboot/springboot.iml" />
     </modules>
   </component>
 </project>

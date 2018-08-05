@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mongodbjdbc" />
+        <module name="springboot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mongodbjdbc" target="1.8" />
       <module name="parent" target="1.8" />
+      <module name="springboot" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
