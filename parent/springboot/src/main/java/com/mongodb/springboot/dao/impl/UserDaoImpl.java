@@ -2,6 +2,9 @@ package com.mongodb.springboot.dao.impl;
 
 import com.mongodb.springboot.dao.UserDao;
 import com.mongodb.springboot.entity.UserEntity;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +14,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserDaoImpl implements UserDao {
 
+  @Autowired
+  private MongoTemplate mongoTemplate;
 
   @Override
   public void saveUser(UserEntity user) {
