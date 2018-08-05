@@ -40,6 +40,11 @@ public class MongoDBTest3 {
       documents.add(document);
       collection.insertMany(documents);
       System.out.println("文档插入成功");
+      //单个文档
+      document = new Document("title", "MongoDB2")
+              .append("description", "database2");
+      collection.insertOne(document);
+      System.out.println("单个文档插入成功");
     } catch (Exception e) {
       System.err.println(e.getClass().getName() + ": " + e.getMessage());
     }
